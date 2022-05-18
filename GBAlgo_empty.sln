@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBAlgo", "GBAlgo\GBAlgo.csproj", "{A5D4574C-469C-47F9-B6C9-CB4D646308DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5D4574C-469C-47F9-B6C9-CB4D646308DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D4574C-469C-47F9-B6C9-CB4D646308DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5D4574C-469C-47F9-B6C9-CB4D646308DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5D4574C-469C-47F9-B6C9-CB4D646308DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25471171-130F-4E93-8548-8B303D563C42}
+	EndGlobalSection
+EndGlobal
