@@ -44,6 +44,9 @@ namespace GBAlgo
                 }
 
 
+                //вызов рекурсии
+                int maxOptions = CountMaxOptions(rows - 1, columns - 1); // -1 для человекочитаемого ввода
+
 
 
                 Console.WriteLine($"Количество вариантов для достижения позиции {rows} {columns}: {maxOptions}.");
@@ -53,7 +56,23 @@ namespace GBAlgo
             } while (exit); //false, если не удалось преобразовать ввод в число или число вне размеров массива
         }
 
+        //решение задачи
+        private static int CountMaxOptions(int rows, int columns)
+        {
 
+            if (rows == 0 || columns == 0)
+            {
+                return 1;
+            }
+            if (matrix[columns, rows] == -1) // если препятствие, то вернуть ноль
+            {
+                return 0;
+            }
+            int res = CountMaxOptions(rows, columns - 1) + CountMaxOptions(rows - 1, columns);
+            matrix[columns, rows] = res; //запись результата в массив
+            //PrtinMatrix();
+            return res;
+        }
 
         //красивый вывод. Работает для массива до [7,7]
         private static void PrtinMatrix()
