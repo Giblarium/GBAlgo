@@ -16,21 +16,26 @@ namespace GBAlgo
             matrix[0, 3] = -1;
 
             bool exit;
-            PrtinMatrix();
+            //PrtinMatrix();
 
             do
             {
+                Console.Clear();
+                PrtinMatrix();
                 exit = true;
+                //ввод номера строки
                 Console.Write($"Введите номер строки от 1 до {matrix.GetLength(1)}:\t ");
-                exit = int.TryParse(Console.ReadLine(), out int columns); //ввод номера строки
+                exit = int.TryParse(Console.ReadLine(), out int columns); 
                 if (columns < 0 || columns > matrix.GetLength(1))
                 {
                     Console.WriteLine("Введеный номер строки за пределами массива!");
                     Console.ReadLine();
                     continue;
                 }
+
+                //ввод номера столбца
                 Console.Write($"Введите номер столбца от 1 до {matrix.GetLength(0)}:\t ");
-                exit = int.TryParse(Console.ReadLine(), out int rows); //ввод номера столбца
+                exit = int.TryParse(Console.ReadLine(), out int rows); 
                 if (rows < 0 || rows > matrix.GetLength(0))
                 {
                     Console.WriteLine("Введеный номер столбца за пределами массива!");
@@ -39,14 +44,13 @@ namespace GBAlgo
                 }
 
                 //вызов рекурсии
-                int maxOptions = CountMaxOptions(rows - 1, columns - 1); // -1, для человекочитаемого ввода
+                int maxOptions = CountMaxOptions(rows - 1, columns - 1); // -1 для человекочитаемого ввода
 
 
-                Console.Clear();
-                PrtinMatrix();
+
                 Console.WriteLine($"Количество вариантов для достижения позиции {rows} {columns}: {maxOptions}.");
                 Console.ReadLine();
-                Console.Clear();
+
 
             } while (exit); //false, если не удалось преобразовать ввод в число или число вне размеров массива
         }
