@@ -32,7 +32,7 @@ namespace GBAlgo
                     Console.ReadLine();
                     continue;
                 }
-
+                 
                 //ввод номера столбца
                 Console.Write($"Введите номер столбца от 1 до {matrix.GetLength(0)}:\t ");
                 exit = int.TryParse(Console.ReadLine(), out int rows); 
