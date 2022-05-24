@@ -119,14 +119,6 @@ namespace GBAlgo8
 
 
 
-        private static void PrintList(List<int> list)
-        {
-            foreach (var item in list)
-            {
-                Console.Write($"{item,4}");
-            }
-            Console.WriteLine();
-        }
 
         private static int[] BubbleSort(int[] arr, int length)
         {
